@@ -12,6 +12,20 @@ services:
       - 5432:5432
     volumes:
       - /var/lib/postgresql/data
+  # FIXME: create a second DB on the container above instead of launching a second instance
+  postgresql-rails:
+    container_name: rails-postgresql
+    environment:
+      POSTGRES_PASSWORD: rails
+      POSTGRES_USER: rails
+    image: postgres:${POSTGRESQL_VERSION}
+    networks:
+      - temporal-network
+    ports:
+      - 5433:5433
+    volumes:
+      - /var/lib/postgresql/data
+      - ../docker/init.sql:/docker-entrypoint-initdb.d/init.sql
   temporal:
     container_name: temporal
     depends_on:
