@@ -37,4 +37,18 @@ classDiagram
     }
 ```
 
-## Logic Flow Example
+## Message Flow Example
+```mermaid
+
+sequenceDiagram
+    User->>Discord: Generate me a poster of three kittens howling at the moon?
+    User-->>NexusServer: POST /discord/generate/image
+    NexusServer-->>SystemWorker: Run GenerateImageWorkflow
+    SystemWorker-->>AIWorker: Run GenerateImageActivity
+    AIWorker-->>SystemWorker: return image
+    SystemWorker-->>NexusServer: return image
+    NexusServer-->>DiscordWorker: Run SendDiscordMessageWorkflow
+    DiscordWorker-->>Discord: Run SendDiscordMessageActivity
+
+    Discord->>User: Here's your poster!
+```
