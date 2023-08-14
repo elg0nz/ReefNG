@@ -7,16 +7,17 @@ require "rails/all"
 Bundler.require(*Rails.groups)
 
 # Load dotenv only in development or test environment
-if ['development', 'test'].include? ENV['RAILS_ENV']
+if ["development", "test"].include? ENV["RAILS_ENV"]
   Dotenv::Railtie.load
 end
 
-HOSTNAME = ENV['HOSTNAME']
+HOSTNAME = ENV["HOSTNAME"]
 
 module Api
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
+    config.active_record.schema_format = :sql
 
     # Configuration for the application, engines, and railties goes here.
     #

@@ -22,10 +22,10 @@ services:
     networks:
       - temporal-network
     ports:
-      - 5433:5433
+      - 5433:5432
     volumes:
       - /var/lib/postgresql/data
-      - ../docker/init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./docker/:/docker-entrypoint-initdb.d
   temporal:
     container_name: temporal
     depends_on:

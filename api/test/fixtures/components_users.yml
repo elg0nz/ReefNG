@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+user_one:
+  id: "e6c15650-e612-4207-9b4a-d15f781bb3b8"
+  friendly_name: "one-breeze-9298"
+  created_at: 2023-01-08 04:05:06
+  updated_at: 2023-01-08 04:05:06
+
+user_two:
+  id: "7b84453e-8923-48ce-9dc9-44afd2f3044c"
+  friendly_name: "two-resonance-4789"
+  created_at: 2023-01-08 04:05:06
+  updated_at: 2023-01-08 04:05:06

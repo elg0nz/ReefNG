@@ -11,9 +11,7 @@ default: &default
 
 development:
   <<: *default
-  database: api_dev
 test:
   <<: *default
-  database: api_test
 production:
   <<: *default

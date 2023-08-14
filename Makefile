@@ -4,9 +4,9 @@ up:
 	$(compose_command) up
 
 down:
-	$(compose_command) up
+	$(compose_command) down
 
 rm:
 	$(compose_command) rm
 
-PHONY: .up
+.PHONY: up
