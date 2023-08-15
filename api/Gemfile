@@ -13,12 +13,13 @@ gem "puma", "~> 5.0"
 gem "jbuilder"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "rack-cors"
+gem "temporal-ruby", github: "coinbase/temporal-ruby"
 
 ## Auth
 gem "haikunator"
 
 group :development, :test do
-  gem "bootsnap", require: false
+  gem "rubocop", require: false
   gem "standard"
   gem "pry", require: false
   gem "ruby-lsp", require: false
@@ -27,4 +28,5 @@ end
 
 group :development do
   gem "spring"
+  gem "bootsnap", require: false
 end

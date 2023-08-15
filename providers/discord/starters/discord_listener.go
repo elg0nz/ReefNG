@@ -14,6 +14,7 @@ import (
 	"go.temporal.io/sdk/client"
 )
 
+// TODO: add TEMPORAL_HOST, TEMPORAL_PORT, TEMPORAL_NAMESPACE, TEMPORAL_TASK_QUEUE to .env
 var (
 	Token     string
 	Namespace string
@@ -37,7 +38,7 @@ func init() {
 	Token = os.Getenv("DISCORD_TOKEN")
 	Namespace = os.Getenv("TEMPORAL_NAMESPACE")
 	if "" == Namespace {
-		Namespace = "sibyls"
+		Namespace = "reef-ng"
 	}
 }
 
@@ -69,7 +70,7 @@ func main() {
 
 	dg.AddHandler(func(s *discordgo.Session, i *discordgo.InteractionCreate) {
 		workflowOptions := client.StartWorkflowOptions{
-			ID:        "discord_interaction" + uuid.New(),
+			ID:        "discord_interaction_" + uuid.New(),
 			TaskQueue: "discord_tasks",
 		}
 		we, err := c.ExecuteWorkflow(context.Background(), workflowOptions, "HandleSlashCommandWorkflow", i)
@@ -77,14 +78,6 @@ func main() {
 			log.Fatalln("Unable to execute workflow", err)
 		}
 		log.Println("Started workflow", "WorkflowID", we.GetID(), "RunID", we.GetRunID())
-
-		// TODO: this reply should be sent by rails
-		s.InteractionRespond(i.Interaction, &discordgo.InteractionResponse{
-			Type: discordgo.InteractionResponseChannelMessageWithSource,
-			Data: &discordgo.InteractionResponseData{
-				Content: "Pong!",
-			},
-		})
 	})
 
 	dg.Identify.Intents |= discordgo.IntentsGuildMessages

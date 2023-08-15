@@ -1,5 +1,10 @@
 bexec = bundle exec
 
+# Bundle install
+bundle:
+	bundle install
+
+# Reset environment
 reset:
 	$(bexec) rake db:drop db:create db:migrate db:seed
 
