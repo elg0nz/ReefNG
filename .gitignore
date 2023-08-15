@@ -30,7 +30,7 @@ api/config/master.key
 
 
 # Worker Binaries
-workers/discord_listener
+discord_listener
 
 .env.development.local
 .env.test.local
