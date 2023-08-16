@@ -1,5 +1,7 @@
 require "temporal-ruby"
 
+return if Rails.env == "test"
+
 namespace = ENV["TEMPORAL_NAMESPACE"]
 
 Temporal.configure do |config|
