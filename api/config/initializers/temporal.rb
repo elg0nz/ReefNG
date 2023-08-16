@@ -12,3 +12,10 @@ Temporal.configure do |config|
     config.credentials = :this_channel_is_insecure
   end
 end
+
+begin
+  Temporal.register_namespace(namespace, "reef-ng default namespace")
+  Temporal.logger.info "Namespace created", {namespace: namespace}
+rescue Temporal::NamespaceAlreadyExistsFailure
+  Temporal.logger.info "Namespace already exists", {namespace: namespace}
+end

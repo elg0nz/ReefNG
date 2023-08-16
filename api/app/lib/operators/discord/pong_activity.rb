@@ -5,7 +5,10 @@ require "json"
 class PongActivity < Temporal::Activity
   def execute(data)
     workflow_id = "discord_pong_#{SecureRandom.uuid}"
-    Temporal.start_workflow("PongWorkflow", JSON.generate(data), {task_queue: "discord_tasks", workflow_id: workflow_id})
+    options = {
+      workflow_id: workflow_id
+    }
+    Temporal.start_workflow("PongWorkflow", JSON.generate(data), options: options, task_queue: "discord_tasks")
     nil
   end
 end
