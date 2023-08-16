@@ -27,3 +27,11 @@ api/storage/*
 
 # Ignore master key for decrypting credentials and more.
 api/config/master.key
+
+
+# Worker Binaries
+discord_listener
+discord_worker
+
+.env.development.local
+.env.test.local
