@@ -1,0 +1,54 @@
+[
+    {
+        "id": "1141586090831134722",
+        "application_id": "1140765394072781003",
+        "type": 2,
+        "data": {
+            "id": "1141577858867798016",
+            "name": "process",
+            "resolved": null,
+            "options": null,
+            "target_id": ""
+        },
+        "guild_id": "1140767160172560455",
+        "channel_id": "1140767161539887156",
+        "message": null,
+        "app_permissions": "278149165739585",
+        "member": {
+            "guild_id": "",
+            "joined_at": "2023-08-14T22:01:25.659Z",
+            "nick": "",
+            "deaf": false,
+            "mute": false,
+            "avatar": "",
+            "user": {
+                "id": "133993767513358337",
+                "email": "",
+                "username": "elg0nz",
+                "avatar": "26c35ef513fc7d33b089c54ef67c0404",
+                "locale": "",
+                "discriminator": "0",
+                "token": "",
+                "verified": false,
+                "mfa_enabled": false,
+                "banner": "",
+                "accent_color": 0,
+                "bot": false,
+                "public_flags": 0,
+                "premium_type": 0,
+                "system": false,
+                "flags": 0
+            },
+            "roles": [],
+            "premium_since": null,
+            "pending": false,
+            "permissions": "281474976710655",
+            "communication_disabled_until": null
+        },
+        "user": null,
+        "locale": "en-US",
+        "guild_locale": "en-US",
+        "token": "aW50ZXJhY3Rpb246MTE0MTU4NjA5MDgzMTEzNDcyMjprTlFaRlhCdEpiYUhNVVZsOUl6NkVjRFQ4SlVRTldwZkRHR3VSS29RQmFvYUE2TEZ0bEFQMDduUUhQOG53S3RKQ0dPcHN6VHhWblZ2ZzU0U0lyQ01Hd05ibEEyc1RCMkZGODlGQ1dEWDVKTW1QNTRaVTl1djBpSkF3QzE3V0pmTg",
+        "version": 1
+    }
+]

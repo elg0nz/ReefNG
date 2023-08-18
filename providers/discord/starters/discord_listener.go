@@ -47,7 +47,12 @@ var (
 		{
 			Name:        "ping",
 			Description: "Returns pong",
-		}}
+		},
+		{
+			Name:        "process",
+			Description: "Processes the last image in the channel",
+		},
+	}
 )
 
 func main() {
