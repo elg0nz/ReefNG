@@ -14,6 +14,10 @@ gem "jbuilder"
 gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw jruby]
 gem "rack-cors"
 gem "temporal-ruby", github: "coinbase/temporal-ruby"
+gem "discordrb"
+
+gem "dry-transaction"
+gem "dry-struct"
 
 ## Auth
 gem "haikunator"
