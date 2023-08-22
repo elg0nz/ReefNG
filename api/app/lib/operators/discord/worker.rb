@@ -8,6 +8,7 @@ module Operators
         # Note: It's important to register dyanmically to ensure the WorkflowType is correctly registered
         worker.register_dynamic_workflow(HandleSlashCommandWorkflow, name: "HandleSlashCommandWorkflow")
         worker.register_activity(PongActivity)
+        worker.register_activity(ProcessImageActivity)
         worker.start
 
         @worker = worker

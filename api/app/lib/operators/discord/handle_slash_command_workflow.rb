@@ -22,6 +22,11 @@ module Operators
 
         router = Systems::Router.new
         router.action("ping") { PongActivity.execute!(data) }
+        router.action("process") do
+          # image = GetLastImageInChannel.execute!(data)
+          # return unless image
+          ProcessImageActivity.execute!(data) ## FIXME: rename to SendDataFromImageActivity
+        end
 
         route = get_route(data)
         router.route(route)
