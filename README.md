@@ -1,3 +1,6 @@
+> :warning: **Warning**: This is pre-pre alpha software. It's not even ready for testing.
+
+
  # ReefNG: Universal Messaging Platform
 
  ReefNG is a provider-agnostic solution that allows supporting complex interactions with messaging providers in an unified way.
